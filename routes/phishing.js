@@ -3,9 +3,9 @@ const router = express.Router()
 
 const phishCtrl = require('../controllers/phishing')
 
-router.get('/start', phishCtrl.getHome)
+router.get('/start', phishCtrl.mainPage)
 
-router.get('/next', phishCtrl.getPhishing)
+router.get('/api', phishCtrl.getPhishing)
 
 
 module.exports = router;
