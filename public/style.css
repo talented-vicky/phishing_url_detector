@@ -1,4 +1,4 @@
-.popup-container {
+/* .popup-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -33,4 +33,77 @@
 
 .popup.active {
     transform: translateY(0);
+} */
+
+.form {
+    width: 30rem;
+    height: 25rem;
+    margin: 10rem auto;
+    background-color: grey;
+    border-radius: .5rem;
+    padding: 1rem 2rem;
+}
+.header {
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+}
+.form_holder {
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+.form_holder label {
+    font-size: 1.1rem;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: .4rem;
+    color: white;
+}
+.form_holder input{
+    font-size: .9rem;
+    height: 1.7rem;
+    border: none;
+}
+
+.form_holder input:focus{
+    border-color: none
+}
+
+.form_holder input:invalid{
+    border-color: red
+}
+
+/* main styles */
+body {
+    padding: 0;
+    margin: 0;
+}
+
+/* button */
+.btn {
+    background-color: rgb(27, 7, 202);
+    border-radius: .8rem;
+    padding: .5rem 1.2rem;
+    font-size: 1.1rem;
+    margin-top: .5rem;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid rgb(77, 24, 24);
+}
+.btn:hover,
+.btn:active {
+    color: rgb(14, 2, 131);
+    background-color: white
+}
+
+/* url */
+.url_header {
+    font-size: 5rem;
+}
+.url {
+    font-size: 2rem;
+    color: grey;
 }

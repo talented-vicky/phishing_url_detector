@@ -1,47 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="popup-container" id="popupContainer">
-        <div class="popup" id="popup">
-            <p> Are you sure you want to proceed? </p>
-            <button onclick="clickYes()">Yes</button>
-            <button onclick="clickNo()">No</button>
-        </div>
-    </div>
-
-    <script>
-        function clickYes() {
-            // take user to the link
-        }
-        function clickNo() {
-            // close the popup dialogue
-        }
-
-        async function showPopup() {
-            try {
-                const resp = await axios.get('/api')
-                const data = resp.data
-                
-                const ppElem = document.getElementById('popup')
-                ppElem.querySelector('p').textContent = data.message
-                
-                document.getElementById('popupContainer').classList.add('active')
-                ppElem.classList.add('active')
-
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        function hidePopup() {
-            document.getElementById('popupContainer').classList.remove('active')
-            document.getElementById('popup').classList.remove('active')
-        }
-    </script>
+    <main>
+        <form class="form" action="/api/phishing" method="post">
+            <h2 class="header"> Welcome to Malicious Url checkerer </h2>
+            <div class="form_holder">
+                <label for="link"> Enter a test url</label>
+                <input type="text" name="link">
+            </div>
+            <button class="btn" type="submit"> Check For phishing </button>
+        </form>
+    </main>
+    
 </body>
 </html>
