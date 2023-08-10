@@ -10,14 +10,29 @@
 
 <body>
     <main>
-        <form class="form" action="/api/phishing" method="post">
-            <h2 class="header"> Welcome to Malicious Url checkerer </h2>
-            <div class="form_holder">
-                <label for="link"> Enter a test url</label>
-                <input type="text" name="link">
+        <div class="page">
+            <div class="logo">
+                <p class="logo-img">YO</p>
             </div>
-            <button class="btn" type="submit"> Check For phishing </button>
-        </form>
+            <div class="body">
+                <div class="sidetext">
+                    <p class="sidetext-title">pro tip</p>
+                    <p class="sidetext-msg">Did you know that 90% of malicious URLs could be detected using two-step filtering on the data?</p>
+                </div>
+                <form class="form" action="/api/phishing" method="post">
+                    <h2 class="header"> malicious url check </h2>
+                    <div class="form_holder">
+                        <label for="link"> Enter Name (Optional)</label>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="form_holder">
+                        <label for="name"> Enter a test url</label>
+                        <input type="text" name="link">
+                    </div>
+                    <button class="btn" type="submit"> Check For phishing </button>
+                </form>
+            </div>
+        </div>
     </main>
     
 </body>

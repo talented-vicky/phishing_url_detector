@@ -11,19 +11,19 @@
 
 <body>
     <main>
-        <h2 class="header"> Phishing info </h2>
-        <div class="result-contaiiner">
-            <% if(phishing === "good") { %>
-                <p class="result"><%= phishing %></p>
-                <button onclick="showSuccessAlert()">Show Success Alert</button>
-                showSuccessAlert()
-            <% } else { %>
-                <button onclick="showSuccessAlert()">Show Success Alert</button>
-                showConfirmAlert()
-            <% } %>
+        <div class="all-result">
+            <h2 class="header"> Phishing info </h2>
+            <div class="result-contaiiner">
+                <% if(phishing === "good") { %>
+                    <p class="result"><%= phishing %></p>
+                    <button onclick="showSuccessAlert()">Verify</button>
+                <% } else { %>
+                    <p class="result"><%= phishing %></p>
+                    <button onclick="showConfirmAlert()">Verify</button>
+                <% } %>
+            </div>
         </div>
     </main>
-    <button onclick="showSuccessAlert()">Show Success Alert</button>
 
     <script>
         // if bening url, call success

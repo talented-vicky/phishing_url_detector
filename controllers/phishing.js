@@ -14,19 +14,19 @@ exports.getPhishing = async (req, res, next) => {
     const modelAPI = "https://phish-xa1s.onrender.com/v1/predict/";
     try {
         const result = await axios.post(modelAPI, { "url": link })
-        const data = result.data
-        console.log(data)
-        console.log(Object.values(data))
+        const data = JSON.stringify(result.data)
+        const another = data.split(":")[1]
+        const final = another.substr(1, 4)
 
         if(!result){
-            const error = new Error("Error Occured")
+            const error = new Error("API Returned Null")
             error.statusCode = 500
             throw error
         }
 
         res.render('result', {
             title: "Phishing Details",
-            phishing: data,
+            phishing: final,
             url: link
         })
     } catch (error) {
